@@ -3,7 +3,7 @@ $icon-font-path: '../fonts/';
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "bower_components/font-awesome/scss/font-awesome.scss";
-@import "bower_components/fullpage.js/jquery.fullPage.scss";
+@import "bower_components/fullpage.js/jquery.fullPage.css";
 // endbower
 
 @import "jcarousel";
@@ -45,8 +45,8 @@ $icon-font-path: '../fonts/';
 
 /* COLORS */
 
-$mellow: #FEDA00;
-$color: #989494;
+$mellow: #2E2E2E;
+$color: #2E2E2E;
 
 body,
 html {
@@ -64,6 +64,7 @@ html {
   &.i-close {
     width: 22px;
     height: 22px;
+    background-position: 3% 85%;
   }
 }
 
@@ -76,17 +77,21 @@ html {
   display: none;
   position: fixed;
   z-index: 3;
-  background: #414142;
+  background: #F2F2F2;
   top: 0;
   left: 0;
   bottom: 0;
   width: 600px;
   @include clearfix;
-  color: #fff;
-  font-family: 'Gotham';
+  color: #1C1C1C;
+  font-family: 'Gotham';//menu con redes: ;
 
   .mellow-logo {
     margin-top: 50px;
+
+    //&:hover {
+        //image: url("../images/logo-menu.png");
+      //}
   }
 
   .border-bottom {
@@ -99,7 +104,7 @@ html {
       bottom: -25px;
       width: 40px;
       height: 2px;
-      background: #fff;
+      background: #1C1C1C;
       content: '';
 
       @media (max-width: $screen-sm-max) {
@@ -115,16 +120,15 @@ html {
     position: relative;
     height: 100%;
   }
-
   .right-menu {
-    background: #484747;
+    background: #E6E6E6;
   }
 
-  p {
-    max-width: 160px;
-    font-size: 11px;
+  p{
+    max-width: 250px;
+    font-size: 12px;
     font-weight: normal;
-    line-height: 19px;
+    line-height: 16px;
   }
 
   .place-bottom {
@@ -140,7 +144,7 @@ html {
 
   .idiom {
     a {
-      color: #fff;
+      color: #2E2E2E;
       font-size: 12px;
 
       &.active {
@@ -150,7 +154,6 @@ html {
   }
 
   h4 {
-    font-weight: bold;
     font-size: 14px;
     margin-bottom: 20px;
     letter-spacing: 1px;
@@ -164,13 +167,19 @@ html {
       display: inline-block;
       width: 60px;
       height: 60px;
-      border: 1px solid #fff;
+      border: 1px solid #2E2E2E;
       float: left;
       font-size: 25px;
       text-align: center;
       line-height: 60px;
-      color: #fff;
-
+      color: #2E2E2E;
+      
+      &:hover {
+        background: #FACC2E;
+        text-decoration: none;
+        color: #F2F2F2;
+        }
+        
       & + a {
         border-left: 0;
       }
@@ -181,12 +190,12 @@ html {
     display: block;
     font-size: 12px;
     a {
-      color: #fff;
+      color: #2E2E2E;
     }
   }
 
   .index {
-    color: $mellow;
+    color: black;
     font-size: 11px;
     display: inline-block;
     margin-right: 4px;
@@ -201,15 +210,14 @@ html {
       display: block;
       text-align: center;
       padding: 20px 0;
-      color: #fff;
-      border-bottom: 1px solid #5c595a;
-      font-size: 13px;
+      color: #2E2E2E;
+      border-top: 2px solid #5c595a;
       text-transform: uppercase;
       letter-spacing: 1px;
-      font-size: 11px;
+      font-size: 13px;
 
       &:hover {
-        background: #72674b;
+        background: #D8D8D8;
         text-decoration: none;
         color: $mellow;
       }
@@ -217,12 +225,18 @@ html {
   }
 
   .work {
-    background: #414142;
-    border: 1px solid #5d5748;
-    padding: 3px 20px;
+    background: #FACC2E;
+    border: none;
+    padding: 10px 25px;
     display: inline-block;
-    font-size: 11px;
+    font-size: 13px;
     cursor: pointer;
+
+    &:hover {
+        background: black;
+        text-decoration: none;
+        color: white;
+      }
   }
 
 }
@@ -234,7 +248,7 @@ header {
   right: 0;
   padding: 10px 58px;
   z-index: 2;
-  background: $mellow;
+  background: #F2F2F2;
 
   &.colored {
     background: none;
@@ -364,6 +378,9 @@ section {
     image: url('../images/computer.jpg');
     size: cover;
     position: 50% 50%;
+    color: white;
+    opacity: 0.6;
+
   }
   font-size: 22px;
 
@@ -508,12 +525,18 @@ section {
   }
 
   .service {
+    width: 80%;
     text-align: center;
     border: 1px solid #D6D4D4;
     margin-bottom: 20px;
-    padding: 20px 0;
-    border-bottom: 8px solid $mellow;
+    padding-top: 25px;
     font-family: 'Gotham';
+
+    &:hover {
+        background: black;
+        text-decoration: none;
+        color: yellow;
+      }
   }
 
   .m-icon {
@@ -559,17 +582,22 @@ section {
     }
   }
 
-  p {
+  h5 {
     font-weight: bold;
     line-height: 16px;
-    letter-spacing: 3px;
-    font-size: 12px;
+    letter-spacing: 2px;
+    font-size: 15px;
   }
+
+  ul{
+    margin-left: -25px;
+    font-size: 11px;
+    }
+
 }
 
 .main-title {
   display: inline-block;
-  border: 2px solid $mellow;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 15px;
@@ -633,10 +661,11 @@ section {
   }
 
   .carousel-elem {
-    color: #fff;
-    background: #414142;
-    padding: 7px;
+    color: #414142;
+    padding: 10px;
     margin: 0 12px;
+    text-align: center;
+    font-size: 3px;
 
     img {
       max-width: 100%;
@@ -776,14 +805,14 @@ section {
     margin-top: 70px;
     a {
       display: inline-block;
-      border: 3px solid $mellow;
+      border: 3px solid #FACC2E;
       padding: 7px 50px;
       font-size: 30px;
-      color: $mellow;
+      color: #FACC2E;
 
       &:hover {
-        background: $mellow;
-        color: #fff;
+        background: #FACC2E;
+        color: #F2F2F2;
       }
 
       & + a{
@@ -808,7 +837,7 @@ section {
     bottom: 0;
     top: 65px;
     z-index: 2;
-    background: #d0ccc7;
+    background: #2E2E2E;
     transform: skewX(-13deg);
     width: 100%;
     text-align: left;
@@ -1073,7 +1102,7 @@ section {
   display: none;
 
   .project-content {
-    background: #D6D4D4;
+    background: red;
     position: relative;
 
     & > a.nav-button {

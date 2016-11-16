@@ -9,6 +9,42 @@ $icon-font-path: '../fonts/';
 @import "jcarousel";
 
 /* FONTS */
+@font-face {
+  font-family: 'AkzidenzGrotesk';
+  font-weight: normal;
+  src: url('../fonts/grotesk/AkzidenzGrotesk-MediumCond.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'AkzidenzGrotesk';
+  font-weight: bold;
+  src: url('../fonts/grotesk/AkzidenzGrotesk-BoldCond.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'DroidSerif';
+  font-weight: normal;
+  src: url('../fonts/droid/DroidSerif.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'DroidSerif';
+  font-weight: bold;
+  src: url('../fonts/droid/DroidSerif-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'DroidSerif';
+  font-weight: bold;
+  font-family: italic;
+  src: url('../fonts/droid/DroidSerif-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'DroidSerif';
+  font-family: italic;
+  src: url('../fonts/droid/DroidSerif-Italic.ttf') format('truetype');
+}
 
 @font-face {
   font-family: 'Calibri';
@@ -72,7 +108,10 @@ html {
   height: 100%;
   position: relative;
 }
-
+.logo-menu{
+  width: 82px;
+  height: 81px;
+}
 .menu {
   display: none;
   position: fixed;
@@ -84,14 +123,14 @@ html {
   width: 600px;
   @include clearfix;
   color: #1C1C1C;
-  font-family: 'Gotham';//menu con redes: ;
+  font-family: 'DroidSerif';//con redes: ;
 
   .mellow-logo {
     margin-top: 50px;
-
-    //&:hover {
-        //image: url("../images/logo-menu.png");
-      //}
+  }
+  h4{
+    font-family: 'DroidSerif';
+    font-weight: bold;
   }
 
   .border-bottom {
@@ -133,6 +172,8 @@ html {
 
   .place-bottom {
     position: absolute;
+    font-family: 'AkzidenzGrotesk';
+    font-weight: bold;
     bottom: 0;
     left: 0;
     right: 0;
@@ -167,6 +208,7 @@ html {
       display: inline-block;
       width: 60px;
       height: 60px;
+      font-family: 'DroidSerif';
       border: 1px solid #2E2E2E;
       float: left;
       font-size: 25px;
@@ -249,9 +291,10 @@ header {
   padding: 10px 58px;
   z-index: 2;
   background: #F2F2F2;
+  border-bottom: #E6E6E6 2px solid;
 
   &.colored {
-    background: none;
+    
     
     .button-span {
       span {
@@ -276,7 +319,7 @@ header {
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 1.5px;
-    font-family: 'Gotham';
+    font-family: '';
   }
 
   .logo {
@@ -373,14 +416,19 @@ section {
 }
 
 #main {
-  color: #fff;
+  color: #aaa;
   background: {
-    image: url('../images/computer.jpg');
+    image: url('../images/carousel/Assets_Site-18.png');
     size: cover;
     position: 50% 50%;
     color: white;
     opacity: 0.6;
 
+  }
+  .logo-banner{
+    width: 130px;
+    position: relative;
+    bottom: 50px;
   }
   font-size: 22px;
 
@@ -518,25 +566,29 @@ section {
 
   .floating {
     margin-top: 65px;
-    @media (max-width: $screen-sm) {
+    @media (max-width: $screen-sm) {//aqui me quede 
       position: static;
       transform: none;
     }
   }
 
   .service {
-    width: 80%;
-    text-align: center;
-    border: 1px solid #D6D4D4;
-    margin-bottom: 20px;
-    padding-top: 25px;
-    font-family: 'Gotham';
+    width: 50%;
+    text-align: left;
+    width: 100px;
+    font-family: 'AkzidenzGrotesk';
 
+    img{
+      width: 80px;
+      height: 80px;
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #BDBDBD;
+    }
     &:hover {
         background: black;
-        text-decoration: none;
-        color: yellow;
-      }
+        text-decoration: none;  
+    }   
   }
 
   .m-icon {
@@ -583,6 +635,7 @@ section {
   }
 
   h5 {
+    font-family: 'AkzidenzGrotesk';
     font-weight: bold;
     line-height: 16px;
     letter-spacing: 2px;
@@ -668,8 +721,13 @@ section {
     font-size: 3px;
 
     img {
-      max-width: 100%;
-      width: 100%;
+      max-width: 90%;
+      width: 90%;
+
+      &:hover{
+        max-width: 100%;//tengo que arreglar esto
+        width: 100%;
+      }
     }
 
     h3 {
@@ -783,14 +841,14 @@ section {
     letter-spacing: 1px;
     font-size: 16px;
     margin-top: 0;
-    font-family: 'Gotham';
+    font-family: 'DroidSerif';
   }
 
   h1 {
     font-size: 157px;
     font-weight: bold;
     margin: 0;
-    font-family: 'Gotham';
+    font-family: 'AkzidenzGrotesk';
 
     @media (max-width: $screen-sm) {
       font-size: 50px;

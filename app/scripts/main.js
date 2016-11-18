@@ -32,19 +32,19 @@ var projects = [
           $('#menu').addClass('hidden');
           $('header').addClass('colored');
           break;
+        //case 2:
+          //changeTarget('Our structure');
+          //break;
         case 2:
-          changeTarget('Our structure');
-          break;
-        case 3:
           changeTarget('Our services');
           break;
-        case 4:
+        case 3:
           changeTarget('Portfolio');
           $('#menu').addClass('hidden');
           break;
-        case 5:
-          changeTarget('Our team');
-        case 5:
+        //case 5:
+          //changeTarget('Our team');
+          case 4:
           changeTarget("Let's talk");
           break;
       }
@@ -73,7 +73,7 @@ var projects = [
 
     if (window.innerWidth >= 769){
       $('#fullpage').fullpage({
-        anchors: ['secmain', 'secstructure', 'secservices', 'secprojects', //'secteam', 
+        anchors: ['secmain', 'secservices', 'secprojects', 
         'seccontact'],
         menu: '#menu',
         scrollingSpeed: 700,
@@ -86,15 +86,11 @@ var projects = [
           if (nextIndex == 2) {
             if (index == 3){
               setTimeout(function() {
-                $('#our-structure').show();
+                $('#our-services').show();
               }, 300);
             } else {
-              $('#our-structure').show();
+              $('#our-services').show();
             }
-          }
-
-          if (index == 2) {
-            $('#our-structure').hide();
           }
 
           setMessage(nextIndex);
@@ -102,7 +98,7 @@ var projects = [
       });
     } else {
       $('#main + .section').remove();
-      $('#our-structure').removeClass('static-content').addClass('section').insertAfter('#main');
+      $('#our-services').removeClass('static-content').addClass('section').insertAfter('#main');
     }
 
     var jcarousel = $('.jcarousel');
@@ -158,7 +154,7 @@ var projects = [
         return $('#main').outerHeight(true);
       },
       bottom: function() {
-        return $('#main').outerHeight(true) + $('#our-structure').outerHeight(true);
+        return $('#main').outerHeight(true) + $('#our-services').outerHeight(true);
       }
     }
   });

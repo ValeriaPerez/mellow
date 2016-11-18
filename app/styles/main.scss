@@ -304,10 +304,12 @@ header {
 
     #target {
       color: $mellow;
+
     }
 
     span {
       color: $mellow;
+  
     }
   }
 
@@ -319,7 +321,8 @@ header {
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 1.5px;
-    font-family: '';
+    font-family: 'AkzidenzGrotesk';
+    font-size: 19px;
   }
 
   .logo {
@@ -426,9 +429,10 @@ section {
 
   }
   .logo-banner{
-    width: 130px;
+    width: 156px;
     position: relative;
-    bottom: 50px;
+    bottom: 40px;
+    right: 30px;
   }
   font-size: 22px;
 
@@ -584,11 +588,12 @@ section {
       padding: 10px;
       text-align: center;
       border: 1px solid #BDBDBD;
-    }
-    &:hover {
+
+      &:hover {
         background: black;
         text-decoration: none;  
-    }   
+      }   
+    }
   }
 
   .m-icon {
@@ -725,9 +730,10 @@ section {
       width: 90%;
 
       &:hover{
-        max-width: 100%;//tengo que arreglar esto
-        width: 100%;
-      }
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+}
     }
 
     h3 {
